@@ -25,6 +25,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Publish Package
-        run: pnpm run build && pnpm publish --provenance --access public
+        run: pnpm run build && pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
