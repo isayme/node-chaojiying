@@ -1,8 +1,8 @@
-![NPM Version](https://img.shields.io/npm/v/chaojiying)
+[![NPM Version](https://img.shields.io/npm/v/chaojiying?style=flat-square)](https://www.npmjs.com/package/chaojiying)
 
 # 关于
 
-Node SDK for [超级鹰](https://www.chaojiying.com/)
+Node SDK for [超级鹰](https://www.chaojiying.com/).
 
 # 使用样例
 
