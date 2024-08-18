@@ -1,0 +1,49 @@
+{
+  "name": "chaojiying",
+  "version": "0.1.0",
+  "description": "",
+  "type": "commonjs",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "scripts": {
+    "build": "pnpm run clean && pnpm run build:esm && pnpm run build:cjs",
+    "build:esm": "tsc -p ./tsconfig.esm.json && echo '{\"type\": \"module\"}' > ./dist/esm/package.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > ./dist/cjs/package.json",
+    "test-ts": "mocha -r ts-node/register test/**/*.test.ts",
+    "test-cjs": "mocha test/**/*.test.cjs",
+    "test-mjs": "mocha test/**/*.test.mjs",
+    "test": "pnpm run build && pnpm run test-ts && pnpm run test-cjs && pnpm run test-mjs",
+    "clean": "rm -rf dist"
+  },
+  "exports": {
+    "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.ts",
+      "default": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [],
+  "author": "isayme <isaymeorg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.17",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^22.4.0",
+    "chai": "^4.5.0",
+    "mocha": "^10.7.3",
+    "nock": "^13.5.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  }
+}
