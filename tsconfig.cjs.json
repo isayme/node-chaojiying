@@ -4,7 +4,6 @@
     "outDir": "dist/cjs",
     "lib": ["ES6", "DOM"],
     "target": "ES6",
-    "module": "CommonJS",
-    "declarationDir": "dist/cjs"
+    "module": "CommonJS"
   }
 }

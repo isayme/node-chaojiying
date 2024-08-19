@@ -4,8 +4,7 @@
     "outDir": "dist/esm",
     "lib": ["ESNext", "DOM"],
     "module": "ESNext",
-    "target": "ESNext",
-    "declarationDir": "dist/esm"
+    "target": "ESNext"
   },
   "ts-node": {
     "esm": false,
