@@ -10,7 +10,7 @@
     "build": "pnpm run clean && pnpm run build:esm && pnpm run build:cjs",
     "build:esm": "tsc -p ./tsconfig.esm.json && echo '{\"type\": \"module\"}' > ./dist/esm/package.json",
     "build:cjs": "tsc -p ./tsconfig.cjs.json && echo '{\"type\": \"commonjs\"}' > ./dist/cjs/package.json",
-    "test-ts": "mocha -r ts-node/register test/**/*.test.ts",
+    "test-ts": "mocha --require tsx test/**/*.test.ts",
     "test-cjs": "mocha test/**/*.test.cjs",
     "test-mjs": "mocha test/**/*.test.mjs",
     "test": "pnpm run build && pnpm run test-ts && pnpm run test-cjs && pnpm run test-mjs",
@@ -39,8 +39,7 @@
     "chai": "^4.5.0",
     "mocha": "^10.7.3",
     "nock": "^13.5.4",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.17.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.5.4"
   }
 }
